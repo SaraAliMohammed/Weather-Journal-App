@@ -25,4 +25,15 @@ app.use(express.static('website'));
 
 // Setup Server
 const port = 8000;
-const server = app.listen(port, ()=>{console.log(`running on localhost: ${port}`)})
+const server = app.listen(port, ()=>{console.log(`running on localhost: ${port}`)});
+
+//add Get route that returns the projectData
+app.get('/all', function(req, res){
+    res.send(projectData);
+    console.log(projectData);
+});
+
+//post data 
+app.post('/add', function(req,res){
+    projectData.push(req.body);
+});

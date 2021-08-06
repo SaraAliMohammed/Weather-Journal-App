@@ -3,6 +3,15 @@ body{
     font-family: -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
+#checkZipCode {
+    display: none;
+}
+
+.zipCodeAlert {
+    color: yellow;
+    display: block;
+}
+
 #app{
     display: grid;
     grid-auto-rows: minmax(150px, auto);
