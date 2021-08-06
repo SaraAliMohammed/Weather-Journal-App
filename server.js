@@ -30,10 +30,13 @@ const server = app.listen(port, ()=>{console.log(`running on localhost: ${port}`
 //add Get route that returns the projectData
 app.get('/all', function(req, res){
     res.send(projectData);
-    console.log(projectData);
 });
 
 //post data 
-app.post('/add', function(req,res){
-    projectData.push(req.body);
+app.post('/addWeatherData', function(req,res){
+    
+    projectData.temperature = req.body.temperature;
+    projectData.date = req.body.date;
+    projectData.userFeelings = req.body.userFeelings;
+    res.send(projectData);
 });
