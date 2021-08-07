@@ -48,11 +48,19 @@ function performClick(){
 const getWetherDataFromApi = async (baseURL, zip, apiKey) =>{
     //Create url to api to get weather data by city zip code
     apiURL = `${baseURL}?zip=${zip}&appid=${apiKey}&units=metric`;
-    //fetch weather data from api 
-    const response = await fetch(apiURL);
+    
     try{
-        const allData = await response.json();
-        return allData;
+        //fetch weather data from api 
+        const response = await fetch(apiURL);
+        if(response.ok){
+            const allData = await response.json();
+            return allData;
+        }else{
+            spanZipCodeAlert.style.display = "block";
+            date.innerHTML = "";
+            temp.innerHTML = "";
+            content.innerHTML = "";
+        }
     }
     catch(error){
         console.log("error", error);

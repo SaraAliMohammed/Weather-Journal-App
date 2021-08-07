@@ -11,13 +11,13 @@ body{
     display: grid;
     grid-auto-rows: minmax(150px, auto);
     /* grid-template-columns:  */
-    /*height:100vh;
+    /*height:100vh;*/
     background: #f23557;
     color: #f0d43a;
     justify-content: center;
     grid-gap: 1em;
     font-size: 20px;
-    font-family: 'Oswald', sans-serif;*/
+    font-family: 'Oswald', sans-serif;
 }
 
 .holder{
@@ -66,7 +66,7 @@ body{
 }
 
 .entry {
-    background-color: lightblue;
+    background-color: #566e75;
     margin-bottom: 5%;
     border: 1px solid;
     padding: 1%;
